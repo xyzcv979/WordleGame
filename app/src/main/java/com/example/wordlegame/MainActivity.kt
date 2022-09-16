@@ -60,10 +60,10 @@ class MainActivity : AppCompatActivity() {
 
             val currWord = inputText.text.toString().uppercase()
 
-            if(currWord.length != 4) { // validate user input
+            if(currWord.length != 4) { // validate user input == 4 letters
                 Toast.makeText(this, "Enter a 4-letter word!", Toast.LENGTH_LONG).show()
                 inputText.setText("")
-                return@setOnClickListener
+                return@setOnClickListener // Like a continue
             }
 
             val textCorrectness = checkGuess(currWord, answerWord)
@@ -109,6 +109,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Restarts application upon click
         restartButton.setOnClickListener() {
             val i = baseContext.packageManager.getLaunchIntentForPackage(baseContext.packageName)
             i!!.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
