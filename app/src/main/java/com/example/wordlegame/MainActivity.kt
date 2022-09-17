@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
             if(currWord == answerWord) {
                 Toast.makeText(this, "Congrats!", Toast.LENGTH_LONG).show()
                 enterButton.isClickable = false
-                inputText.isClickable = false
+                inputText.isEnabled = false
                 answer.visibility = View.VISIBLE
                 restartButton.visibility = View.VISIBLE
                 restartButton.isClickable = true
@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
                 // show answer
                 // reset button?
                 enterButton.isClickable = false
-                inputText.isClickable = false
+                inputText.isEnabled = false
                 answer.visibility = View.VISIBLE
                 restartButton.visibility = View.VISIBLE
                 restartButton.isClickable = true
